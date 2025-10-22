@@ -1,7 +1,8 @@
 # Demo for training Fashion MNIST autoencoder locally
 
 Instructions
-0 Install [uv](https://docs.astral.sh/uv/)
+
+0. Install [uv](https://docs.astral.sh/uv/)
 1. `uv venv`
 2. `source .venv/bin/activate` 
 3. `time uv run train.py`
