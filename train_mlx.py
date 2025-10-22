@@ -3,8 +3,8 @@ import argparse
 import mlx.core as mx
 import mlx.nn as nn
 import mlx.optimizers as optim
-# import fashion MNIST dataset from keras
-from tensorflow import keras
+# import fashion MNIST dataset from torchvision
+from torchvision import datasets
 import matplotlib.pyplot as plt
 import time
 import numpy as np
@@ -16,8 +16,15 @@ CLASS_NAMES = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
 
 # Load Fashion MNIST dataset
 def load_fashion_mnist(batch_size=64):
-    # Download and load the dataset
-    (train_images, train_labels), (test_images, test_labels) = keras.datasets.fashion_mnist.load_data()
+    # Download and load the dataset from torchvision
+    train_dataset = datasets.FashionMNIST(root='./data', train=True, download=True)
+    test_dataset = datasets.FashionMNIST(root='./data', train=False, download=True)
+
+    # Extract data as numpy arrays
+    train_images = train_dataset.data.numpy()
+    train_labels = train_dataset.targets.numpy()
+    test_images = test_dataset.data.numpy()
+    test_labels = test_dataset.targets.numpy()
 
     # Preprocess the data
     # Normalize pixel values to [0, 1]
