@@ -1,0 +1,12 @@
+[project]
+name = "mlx-fashion-mnist"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib>=3.10.7",
+    "mlx>=0.29.3",
+    "scikit-learn>=1.7.2",
+    "tensorflow>=2.20.0",
+]
