@@ -2,6 +2,9 @@
 
 Instructions
 
+In order to get GPU acceleration, you need to use a Mac with an M-series chip. 
+The code program might still be able to run on CPU if you have a different chip, but it might be slower.
+
 0. Install [uv](https://docs.astral.sh/uv/)
 1. `uv venv`
 2. `source .venv/bin/activate` 
