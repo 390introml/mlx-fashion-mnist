@@ -175,9 +175,9 @@ if __name__ == "__main__":
 
     # 2 & 3. Random sample and reconstruction
     print("Creating original and reconstructed image comparison...")
-    random_idx = np.random.randint(0, test_images.shape[0])
-    sample_image = test_images[random_idx:random_idx+1]
-    sample_label = int(test_labels[random_idx])
+    # random_idx = np.random.randint(0, test_images.shape[0])
+    sample_image = test_images[0:1]
+    sample_label = int(test_labels[0])
 
     # Get reconstruction
     reconstructed = model(sample_image)
@@ -198,7 +198,7 @@ if __name__ == "__main__":
     axes[1].axis('off')
 
     plt.tight_layout()
-    plt.savefig('reconstruction_comparison.png', dpi=150)
+    plt.savefig(f"recon_{args.representation_size}.png", dpi=150)
     print("Saved reconstruction comparison to reconstruction_comparison.png")
 
     print("\nAll visualizations completed!")
