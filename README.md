@@ -1,5 +1,7 @@
 # Demo for training Fashion MNIST autoencoder locally
 
+This is a simple autoencoder which can be run locally to generate latent space representations for the well-known <a href="https://github.com/zalandoresearch/fashion-mnist">Fashion MNIST</a> dataset, as a pedagogical example of how autoencoders work.
+
 Instructions
 
 0. Install [uv](https://docs.astral.sh/uv/)
